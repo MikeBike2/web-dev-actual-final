@@ -3,7 +3,15 @@
 </script>
 
 <header>
-  <h1> Pokemon</h1>
+
+    <img
+      src="src/components/Images/pokedex-logo.png"
+      width="400"
+      height="200"
+      alt="team-logo"
+      class="hover-image"
+    />
+  
   <nav>
     <ul>
       {#each navItems as item}
@@ -15,22 +23,21 @@
 
 <style>
   header {
-    background: #f7f7f7;
+    background: #f05454;
     margin: 0;
     padding: 8px;
     box-sizing: border-box;
     grid-column: 1 / 3;
+    text-align: center;
   }
-  h1 {
-    font-size: 40px;
-  }
+
   ul {
     list-style-type: none;
     padding-left: 0;
   }
   nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center; 
   }
   nav ul {
@@ -45,6 +52,7 @@
   nav a {
     text-decoration: none; 
     color: black; 
+    
   }
 </style>
 

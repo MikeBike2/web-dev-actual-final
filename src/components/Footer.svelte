@@ -28,7 +28,9 @@
 
 <style>
   footer {
-    grid-column: 1 / 3;
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
     display: flex;
     justify-content: center;
     align-items: center;

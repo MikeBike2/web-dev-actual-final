@@ -2,6 +2,7 @@
   import Footer from "../components/Footer.svelte";
   import Header from "../components/Header.svelte";
   import Navbar from "../components/Navbar.svelte";
+  
 
   let navItems = [
     { text: "Home", href: "/" },
@@ -10,17 +11,24 @@
   ];
 </script>
 
+
+
 <header>
   <Header {navItems} />
 </header>
 
+
+<footer>
+  <Footer />
+</footer>
+
 <slot />
 
-<footer></footer>
 
 <style>
   header,
   footer {
+    
     font-family:
       system-ui,
       -apple-system,

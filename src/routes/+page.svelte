@@ -3,16 +3,15 @@
     import Button from "../components/Button.svelte";
     import Navbar from '../components/Navbar.svelte';
     import Card from '../components/Card.svelte';
-    export let AllPokemonNames;
-   
-  </script>
-  <main>
-    <div>
+    export let data;
  
+    </script>
+
+    <main>
+      <div>
+        <Card {data} />
       </div>
-  </main>
-
-
+    </main>
   <style>
     main {
       display: flex;

@@ -9,6 +9,8 @@
   <div>
     <Card {data} />
     
+
+    
   </div>
 </main>
 

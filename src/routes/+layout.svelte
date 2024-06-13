@@ -3,9 +3,13 @@
   import Header from "../components/Header.svelte";
   import Navbar from "../components/Navbar.svelte";
   import Button from "../components/Card.svelte";
+
+
+
+
   let navItems = [
     { text: "Home", href: "/" },
-    { text: "About", href: "/" },
+    { text: "About", href: "../GetPokeAbilites" },
     { text: "Random pokemon", href: "/" },
   ];
 </script>

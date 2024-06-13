@@ -10,9 +10,9 @@ export async function load({ fetch }) {
       throw new Error("Failed to fetch Pokémon data or incorrect data format");
     }
 
-     const AllPokemon = data.results;
-     
-    return {AllPokemon};
+    const AllPokemon = data.results;
+
+    return { AllPokemon };
   } catch (error) {
     console.error("Error loading Pokémon:", error);
     return {
@@ -21,3 +21,4 @@ export async function load({ fetch }) {
     };
   }
 }
+

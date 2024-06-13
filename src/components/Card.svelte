@@ -1,14 +1,15 @@
-<!-- Card.svelte -->
+
 <script>
-  // Declare the AllPokemon prop
+ 
   export let data;
 
   let showStats = false;
 
-  const getImageUrl = (/** @type {{ url: string; }} */ pokemon) => {
-    // Extract the Pokémon ID from the URL
+
+  export const getImageUrl = (/** @type {{ url: string; }} */ pokemon) => {
+   
     const id = pokemon.url.split('/').slice(-2, -1)[0];
-    // Construct the image URL using the Pokémon ID
+   
     return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
   }
 
@@ -24,9 +25,8 @@
       <h1>{pokemon.name}</h1>
       {#if showStats}
         <div class="pokemon-stats">
-          <p>Weight: {pokemon.weight}</p>
-          <p>Height: {pokemon.height}</p>
-          <!-- Add more stats as needed -->
+          <p>abilities: {pokemon.url.abilities} </p>
+         
         </div>
       {/if}
       <button on:click={toggleStats}>

@@ -54,7 +54,6 @@
 </script>
 
 <h1>Who's That Pokemon</h1>
-<p>currently only works on desktop</p>
 
 <div class="quiz-container">
   <img

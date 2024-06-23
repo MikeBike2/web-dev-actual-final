@@ -1,5 +1,5 @@
 <script>
-  export let text = '';
+  export let text = "";
   export let onClick = () => {};
 </script>
 
@@ -23,14 +23,14 @@
   @media screen and (max-width: 768px) {
     button {
       padding: 0.5rem;
-      font-size: 0.9rem; 
+      font-size: 0.9rem;
     }
   }
 
   @media screen and (max-width: 480px) {
     button {
       padding: 0.4rem;
-      font-size: 0.8rem; 
+      font-size: 0.8rem;
+    }
   }
-}
 </style>

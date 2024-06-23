@@ -1,14 +1,10 @@
-
 <script>
-//ended up using the header for nav for now.
+  //ended up using the header for nav for now.
   import Button from "./Button.svelte";
-
 </script>
 
 <nav>
-  <div>
-    
-  </div>
+  <div></div>
 </nav>
 
 <style>

@@ -5,11 +5,7 @@
 
 <footer>
   <div class="image-container">
-    <img
-      src="src\Images\pokedex_image.png"
-      alt="team-logo"
-      class="logo-image"
-    />
+    <img src="pokedex_image.png" alt="team-logo" class="logo-image" />
   </div>
 
   <nav>
@@ -38,8 +34,8 @@
   }
 
   .logo-image {
-    width: 200px; 
-    height: 100px; 
+    width: 200px;
+    height: 100px;
   }
 
   footer .image-container {

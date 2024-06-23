@@ -1,4 +1,3 @@
-
 <script>
   import Button from "./Button.svelte";
   export let data;
@@ -12,14 +11,16 @@
   // Function to get the image URL of a Pokemon
   // @ts-ignore
   const getImageUrl = (pokemon) => {
-    const id = pokemon.url.split('/').slice(-2, -1)[0]; /* takes the last element from the array*/
+    const id = pokemon.url
+      .split("/")
+      .slice(-2, -1)[0]; /* takes the last element from the array*/
     return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
   };
 
   // Function to get the ID of a Pokemon
   // @ts-ignore
   const getPokemonId = (pokemon) => {
-    const id = pokemon.url.split('/').slice(-2, -1)[0];
+    const id = pokemon.url.split("/").slice(-2, -1)[0];
     return id;
   };
 
@@ -36,10 +37,9 @@
         throw new Error("Failed to fetch Pokemon stats");
       }
 
-     
       // @ts-ignore
       // create a new array based on the results of the function.
-      const abilities = stats.abilities.map(ability => ability.ability.name);
+      const abilities = stats.abilities.map((ability) => ability.ability.name);
       //return a promise
       return { abilities };
     } catch (error) {
@@ -61,9 +61,9 @@
       <Button text="Show Stats" onClick={toggleStats} />
       <!-- Display stats if showStats is true -->
       {#if showStats}
-      <!--using an await block here because we are accessing a proimise -->
+        <!--using an await block here because we are accessing a proimise -->
         {#await loadPokemonStats({ fetch, pokemon })}
-        <!--message while the promise is being fufilled-->
+          <!--message while the promise is being fufilled-->
           <p>Loading...</p>
           <!-- once promise has been fufilled then we can work with data-->
         {:then stats}
@@ -90,7 +90,6 @@
   }
 
   .pokemon-card {
-  
     margin-bottom: 20px;
     text-align: center;
     border: 1px solid #ccc;
@@ -135,5 +134,3 @@
     }
   }
 </style>
-
-

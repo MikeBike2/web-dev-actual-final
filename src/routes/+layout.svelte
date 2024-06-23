@@ -4,9 +4,6 @@
   import Navbar from "../components/Navbar.svelte";
   import Button from "../components/Card.svelte";
 
-
-
-
   let navItems = [
     { text: "Home", href: "/" },
     { text: "About", href: "../about" },
@@ -16,11 +13,8 @@
   let footerItems = [
     { text: "Top of Page", href: "/" },
     { text: "About", href: "../about" },
-    
-  ]
+  ];
 </script>
-
-
 
 <header>
   <Header {navItems} />
@@ -30,9 +24,6 @@
 <footer>
   <Footer {footerItems} />
 </footer>
-
-
-
 
 <style>
   header,

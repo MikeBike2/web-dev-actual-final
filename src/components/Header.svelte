@@ -3,11 +3,7 @@
 </script>
 
 <header>
-  <img
-    src= "src\Images\pokedex-logo.png"
-    alt="team-logo"
-    class="logo-image"
-  />
+  <img src="pokedex-logo.png" alt="team-logo" class="logo-image" />
 
   <nav>
     <ul>
@@ -31,7 +27,7 @@
     width: 100%; /* Ensures the image spans the full width of its container */
     max-width: 400px;
     height: auto; /* Maintains aspect ratio */
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
   }
 
   nav {

@@ -1,7 +1,7 @@
 export async function load({ fetch }) {
   try {
     const MAX_POKEMON = "151";
-    const offset = "0";
+    const offset = "0"; //pagination use if i get time
     const apiurl = `https://pokeapi.co/api/v2/pokemon?limit=${MAX_POKEMON}&offset=${offset}`;
     const res = await fetch(apiurl);
     const data = await res.json();

@@ -1,9 +1,10 @@
 <script>
   export let navItems;
+   import Images from "../components/Images/pokedex-logo.png"
 </script>
 
 <header>
-  <img src="pokedex-logo.png" alt="team-logo" class="logo-image" />
+  <img src="{Images}" alt="team-logo" class="logo-image" />
 
   <nav>
     <ul>

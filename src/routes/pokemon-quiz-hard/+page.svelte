@@ -1,6 +1,5 @@
 <script>
   import Button from "../../components/Button.svelte";
-  import Images from "../../components/Images/whosthatpokemon.png"; 
   let currentQuestion = 0;
   let score = 0;
   let brightness = 0; // Initial brightness

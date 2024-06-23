@@ -1,11 +1,13 @@
 <script>
+  import Images from "../components/Images/pokedex-logo.png"
   let currentYear = new Date().getFullYear();
+
   export let footerItems;
 </script>
 
 <footer>
   <div class="image-container">
-    <img src="pokedex_image.png" alt="team-logo" class="logo-image" />
+    <img src="{Images}" alt="team-logo" class="logo-image" />
   </div>
 
   <nav>

@@ -9,8 +9,8 @@
       imageUrl:
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
       options: ["Pikachu", "Bulbasaur", "Charmander", "Squirtle"],
-      answer: "Bulbasaur",
-      selectedAnswer: null, // Initially no answer selected
+      answer: "Pikachu",
+      selectedAnswer: null,
     },
     {
       imageUrl:
@@ -24,6 +24,55 @@
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
       options: ["Squirtle", "Venusaur", "Pikachu", "Charizard"],
       answer: "Squirtle",
+      selectedAnswer: null,
+    },
+    {
+      imageUrl:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+      options: ["Pikachu", "Jigglypuff", "Meowth", "Snorlax"],
+      answer: "Pikachu",
+      selectedAnswer: null,
+    },
+    {
+      imageUrl:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png",
+      options: ["Charizard", "Blastoise", "Venusaur", "Pidgeot"],
+      answer: "Charizard",
+      selectedAnswer: null,
+    },
+    {
+      imageUrl:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png",
+      options: ["Caterpie", "Butterfree", "Beedrill", "Pidgey"],
+      answer: "Caterpie",
+      selectedAnswer: null,
+    },
+    {
+      imageUrl:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png",
+      options: ["Eevee", "Jolteon", "Vaporeon", "Flareon"],
+      answer: "Eevee",
+      selectedAnswer: null,
+    },
+    {
+      imageUrl:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png",
+      options: ["Mew", "Mewtwo", "Zapdos", "Articuno"],
+      answer: "Mewtwo",
+      selectedAnswer: null,
+    },
+    {
+      imageUrl:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/143.png",
+      options: ["Snorlax", "Dragonite", "Gyarados", "Lapras"],
+      answer: "Snorlax",
+      selectedAnswer: null,
+    },
+    {
+      imageUrl:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/196.png",
+      options: ["Espeon", "Umbreon", "Lugia", "Ho-oh"],
+      answer: "Espeon",
       selectedAnswer: null,
     },
   ];

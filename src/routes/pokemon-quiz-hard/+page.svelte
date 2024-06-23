@@ -151,6 +151,10 @@
     padding: 20px;
     box-sizing: border-box;
     position: relative; /* Ensure relative positioning for absolute elements */
+    background-image: url('whosthatpokemon.png'); /* Set the background image */
+    background-size: cover; /* Cover the entire container with the background image */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-position: center; /* Center the background image */
   }
 
   .quiz-image {

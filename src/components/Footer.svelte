@@ -69,6 +69,14 @@
     text-decoration: underline;
   }
 
+  @media screen and (max-width: 1920px) {
+    .logo-image {
+      width: 250px; 
+      height: auto; 
+      display: none;
+    }
+  }
+
   /* Media queries for responsiveness */
   @media screen and (max-width: 768px) {
     .logo-image {

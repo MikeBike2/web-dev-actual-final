@@ -153,7 +153,6 @@
     position: relative; /* Ensure relative positioning for absolute elements */
     background-image: url('whosthatpokemon.png'); /* Set the background image */
     background-size: cover; /* Cover the entire container with the background image */
-    background-repeat: no-repeat; /* Prevent background image from repeating */
     background-position: center; /* Center the background image */
   }
 
@@ -185,14 +184,24 @@
     .quiz-container {
       flex-direction: column;
       height: auto;
+    background-image: url('whosthatpokemon.png'); /* Set the background image */
+    background-size: cover; /* Cover the entire container with the background image */
+    background-position: center; /* Center the background image */
     }
-
     .quiz-image {
       max-width: 60%; /* Adjusted width for smaller screens */
+      
     }
   }
 
   @media screen and (max-width: 480px) {
+    .quiz-container {
+    flex-direction: column;
+    height: auto;
+    background-image: url('whosthatpokemon.png'); /* Set the background image */
+    background-size: cover; /* Cover the entire container with the background image */
+    background-position: center; /* Center the background image */
+    }
     .quiz-image {
       max-width: 40%; /* Further reduced width for smaller screens */
     }

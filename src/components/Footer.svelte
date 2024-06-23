@@ -6,7 +6,7 @@
 <footer>
   <div class="image-container">
     <img
-      src="src/Images/pokedex_image.png"
+      src="src\Images\pokedex_image.png"
       alt="team-logo"
       class="logo-image"
     />

@@ -17,9 +17,9 @@
   ];
 
   let navItems = [
-  { text: "Filter by Fire Type", href: "/" },
-  { text: "Filter by Water Type", href: "/" },
-  { text: "Filter by Grass Type", href: "/" },
+  { text: "Filter by Fire Type", href: "../filter-by-fire" },
+  { text: "Filter by Water Type", href: "../filter-by-water" },
+  { text: "Filter by Grass Type", href: "../filter-by-grass" },
  
 ];
 </script>

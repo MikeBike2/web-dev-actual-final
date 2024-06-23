@@ -1,11 +1,10 @@
 
 <script>
-    //was short of time here and ended up going with a different sprite to save time 
     export let data;
   </script>
   
   <div class="pokemon-container">
-    {#each data.AllFPNames as pokemon}
+    {#each data.AllGPNames as pokemon}
       <div class="pokemon-card">
         <p class="pokemon-name">{pokemon}</p>
         <a href="https://pokemondb.net/pokedex/{pokemon}"><img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/{pokemon}.png" alt="{pokemon}"></a>

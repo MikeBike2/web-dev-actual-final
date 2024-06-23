@@ -1,17 +1,16 @@
 export async function load({ fetch }) {
   try {
-    
-    const apiurl = `https://pokeapi.co/api/v2//type/fire/`;
+    const apiurl = `https://pokeapi.co/api/v2/type/fire/`;
     const res = await fetch(apiurl);
     const data = await res.json();
 
-    if (!data || !data.results || !Array.isArray(data.results)) {
+    if (!data || !data.pokemon || !Array.isArray(data.pokemon)) {
       throw new Error("Failed to fetch Pokémon data or incorrect data format");
     }
 
-    const AllPokemon = data.results;
+    const AllFPNames = data.pokemon.map((pokemon) => pokemon.pokemon.name);
 
-    return { AllPokemon };
+    return { AllFPNames };
   } catch (error) {
     console.error("Error loading Pokémon:", error);
     return {

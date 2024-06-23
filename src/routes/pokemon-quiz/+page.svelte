@@ -1,10 +1,9 @@
 <script>
   import Button from "../../components/Button.svelte";
-  import Images from "../../components/Images/whosthatpokemon.png"
-  import { onMount } from 'svelte';
-   import Sounds from "../../components/Sounds/who's-that-pokemon-made-with-Voicemod.mp3"
- //will code random quiz data if i get time using api call. so its not the same quiz each time 
-
+  import Images from "../../components/Images/whosthatpokemon.png";
+  import { onMount } from "svelte";
+  import Sounds from "../../components/Sounds/who's-that-pokemon-made-with-Voicemod.mp3";
+  //will code random quiz data if i get time using api call. so its not the same quiz each time
 
   let currentQuestion = 0;
   let score = 0;
@@ -138,69 +137,68 @@
 
 <style>
   h1 {
-     text-align: center; 
-     color: #333; 
-     font-size: 2rem; 
-     margin-bottom: 20px; /* Add margin below the heading */
-     letter-spacing: 2px; /* Adjust letter spacing */
-   }
- 
-   .quiz-container {
-     border: solid black 1px;
-     display: flex;
-     justify-content: left;
-     align-items: center;
-     height: 80vh;
-     max-width: 80%;
-     margin: 0 auto;
-     padding: 20px;
-     box-sizing: border-box;
-     position: relative; 
-     background-image: url("../../components/Images/whosthatpokemon.png"); 
-     background-size: cover; /* Cover the entire container with the background image */
-     background-position: right; 
-    
-   }
-   
-   .quiz-image {
-     max-width: 100%;
-     height: auto;
-     transition: filter 0.3s ease; /* Smooth transition for filter effects */
-   }
- 
-   .option {
-     margin: 10px 0;
-   }
- 
-   input[type="radio"] {
-     appearance: none; /* Remove default radio button appearance */
-     width: 1em;
-     height: 1em;
-     border-radius: 50%; /* Create a circular radio button */
-     border: 2px solid #333; 
-     margin-right: 0.5em; /* Space between radio button and label */
-   }
- 
-   input[type="radio"]:checked {
-     background-color: #333; /* Change background color when checked */
-   }
- 
-   /* Media query for responsive adjustments */
-   @media screen and (max-width: 768px) {
-     .quiz-container {
-       flex-direction: column;
-       height: auto;
-       background-position: left; 
-     }
-     .quiz-image {
-       max-width: 60%; /* Adjusted width for smaller screens */
-     }
-   }
- 
-   @media screen and (max-width: 480px) {
-     .quiz-image {
-       max-width: 40%; /* Further reduced width for smaller screens */
-       background-position: left; 
-     }
-   }
- </style>
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px; /* Add margin below the heading */
+    letter-spacing: 2px; /* Adjust letter spacing */
+  }
+
+  .quiz-container {
+    border: solid black 1px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 80vh;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    background-image: url("../../components/Images/whosthatpokemon.png");
+    background-size: cover; /* Cover the entire container with the background image */
+    background-position: right;
+  }
+
+  .quiz-image {
+    max-width: 100%;
+    height: auto;
+    transition: filter 0.3s ease; /* Smooth transition for filter effects */
+  }
+
+  .option {
+    margin: 10px 0;
+  }
+
+  input[type="radio"] {
+    appearance: none; /* Remove default radio button appearance */
+    width: 1em;
+    height: 1em;
+    border-radius: 50%; /* Create a circular radio button */
+    border: 2px solid #333;
+    margin-right: 0.5em; /* Space between radio button and label */
+  }
+
+  input[type="radio"]:checked {
+    background-color: #333; /* Change background color when checked */
+  }
+
+  /* Media query for responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .quiz-container {
+      flex-direction: column;
+      height: auto;
+      background-position: left;
+    }
+    .quiz-image {
+      max-width: 60%; /* Adjusted width for smaller screens */
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .quiz-image {
+      max-width: 40%; /* Further reduced width for smaller screens */
+      background-position: left;
+    }
+  }
+</style>

@@ -33,15 +33,16 @@
       const res = await fetch(apiurl);
       const stats = await res.json();
 
-      if (!stats || !stats.abilities) {
+      if (!stats) {
         throw new Error("Failed to fetch Pokemon stats");
       }
 
       // @ts-ignore
       // create a new array based on the results of the function.
       const abilities = stats.abilities.map((ability) => ability.ability.name);
+      const types = stats.types.map((type) => type.type.name);
       //return a promise
-      return { abilities };
+      return { abilities,types };
     } catch (error) {
       console.error("Error loading Pokemon stats:", error);
       return {
@@ -68,9 +69,15 @@
           <!-- once promise has been fufilled then we can work with data-->
         {:then stats}
           <section class="pokemon-stats">
-            <p>Abilities:</p>
+            <h2>Abilities:</h2>
+            
             {#each stats.abilities as ability}
               <p>{ability}</p>
+              
+            {/each}
+            <h2>Type</h2>
+            {#each stats.types as type}
+            <p>{type}</p>
             {/each}
           </section>
         {:catch error}

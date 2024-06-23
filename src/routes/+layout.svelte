@@ -4,7 +4,7 @@
   import Navbar from "../components/Navbar.svelte";
   import Button from "../components/Card.svelte";
 
-  let navItems = [
+  let headerItems = [
     { text: "Home", href: "/" },
     { text: "About", href: "../about" },
     { text: "Pokemon Quiz", href: "../pokemon-quiz" },
@@ -15,12 +15,18 @@
     { text: "Top of Page", href: "/" },
     { text: "About", href: "../about" },
   ];
+
+  let navItems = [
+    {text:"Filter by Fire Type", href: "../filter-by-fire"}
+  ]
 </script>
 
 <header>
-  <Header {navItems} />
+  <Header {headerItems} />
 </header>
-
+<nav>
+  <Navbar {navItems}/>
+</nav>
 <slot />
 <footer>
   <Footer {footerItems} />

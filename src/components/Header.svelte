@@ -1,5 +1,5 @@
 <script>
-  export let navItems;
+  export let headerItems;
    import Images from "../components/Images/pokedex-logo.png"
 </script>
 
@@ -8,7 +8,7 @@
 
   <nav>
     <ul>
-      {#each navItems as item}
+      {#each headerItems as item}
         <li><a href={item.href}>{item.text}</a></li>
       {/each}
     </ul>

@@ -1,5 +1,6 @@
 <script>
   //will code random quiz data if i get time using api call. so its not the same quiz each time
+  //current bug with brightness transition but ran out of time to solve this 
   import { onMount } from 'svelte';
   import Button from "../../components/Button.svelte";
   import Images from "../../components/Images/whosthatpokemon.png";

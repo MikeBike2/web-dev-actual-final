@@ -4,7 +4,7 @@
 
 <header>
   <img
-    src="src/components/Images/pokedex-logo.png"
+    src="src/Images/pokedex-logo.png"
     alt="team-logo"
     class="logo-image"
   />

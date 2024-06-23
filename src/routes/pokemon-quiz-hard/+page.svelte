@@ -94,11 +94,9 @@
 
     if (selectedAnswer === correctAnswer) {
       score++; // Increment score if selected answer is correct
-      brightness = 100; // Set brightness to 100% for correct answer
-    } else {
-      brightness = 100; // Set brightness to 100% for incorrect answer
     }
 
+    brightness = 100;
     // Move to the next question after a brief delay
     setTimeout(() => {
       currentQuestion++;

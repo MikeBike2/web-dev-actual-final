@@ -1,5 +1,6 @@
 <script>
   import Button from "../../components/Button.svelte";
+  import Images from "../../components/Images/whosthatpokemon.png"
   let currentQuestion = 0;
   let score = 0;
   let brightness = 0; // Initial brightness
@@ -150,7 +151,7 @@
     padding: 20px;
     box-sizing: border-box;
     position: relative; /* Ensure relative positioning for absolute elements */
-    background-image: url("whosthatpokemon.png"); /* Set the background image */
+    background-image: url("../../components/Images/whosthatpokemon.png"); /* Set the background image */
     background-size: cover; /* Cover the entire container with the background image */
     background-position: center; /* Center the background image */
   }

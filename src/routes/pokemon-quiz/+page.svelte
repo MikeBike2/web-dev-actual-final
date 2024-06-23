@@ -1,6 +1,8 @@
 <script>
   import Button from "../../components/Button.svelte";
   import Images from "../../components/Images/whosthatpokemon.png"
+ //will code random quiz data if i get time using api call. so its not the same quiz each time 
+
 
   let currentQuestion = 0;
   let score = 0;

@@ -1,6 +1,7 @@
 <script>
+  //will code random quiz data if i get time using api call. so its not the same quiz each time
   import Button from "../../components/Button.svelte";
-  import Images from "../../components/Images/whosthatpokemon.png"
+  import Images from "../../components/Images/whosthatpokemon.png";
   let currentQuestion = 0;
   let score = 0;
   let brightness = 0; // Initial brightness
@@ -136,7 +137,7 @@
 </div>
 
 <style>
- h1 {
+  h1 {
     text-align: center; /* Center align the text */
     color: #333; /* Set text color */
     font-size: 2rem; /* Adjust font size */
@@ -154,13 +155,12 @@
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
-    position: relative; 
-    background-image: url("../../components/Images/whosthatpokemon.png"); 
+    position: relative;
+    background-image: url("../../components/Images/whosthatpokemon.png");
     background-size: cover; /* Cover the entire container with the background image */
-    background-position: right; 
-   
+    background-position: right;
   }
-  
+
   .quiz-image {
     max-width: 100%;
     height: auto;
@@ -189,7 +189,7 @@
     .quiz-container {
       flex-direction: column;
       height: auto;
-      background-position: left; 
+      background-position: left;
     }
     .quiz-image {
       max-width: 60%; /* Adjusted width for smaller screens */
@@ -199,7 +199,7 @@
   @media screen and (max-width: 480px) {
     .quiz-image {
       max-width: 40%; /* Further reduced width for smaller screens */
-      background-position: left; 
+      background-position: left;
     }
   }
 </style>

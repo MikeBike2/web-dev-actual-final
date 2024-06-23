@@ -151,6 +151,18 @@
   .option {
     margin: 10px 0;
   }
+  input[type="radio"] {
+    appearance: none; /* Remove default radio button appearance */
+    width: 1em;
+    height: 1em;
+    border-radius: 50%; /* Create a circular radio button */
+    border: 2px solid #333; /* Add border for visual clarity */
+    margin-right: 0.5em; /* Space between radio button and label */
+  }
+
+  input[type="radio"]:checked {
+    background-color: #333; /* Change background color when checked */
+  }
 
   /* Media query for responsive adjustments */
   @media screen and (max-width: 768px) {

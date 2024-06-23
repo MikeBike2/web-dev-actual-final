@@ -1,6 +1,8 @@
 <script>
   import Button from "../../components/Button.svelte";
   import Images from "../../components/Images/whosthatpokemon.png"
+  import { onMount } from 'svelte';
+   import Sounds from "../../components/Sounds/who's-that-pokemon-made-with-Voicemod.mp3"
  //will code random quiz data if i get time using api call. so its not the same quiz each time 
 
 
@@ -79,6 +81,10 @@
       selectedAnswer: null,
     },
   ];
+  function playSound() {
+    const audio = new Audio(`${Sounds}`);
+    audio.play();
+  }
 
   function resetQuiz() {
     currentQuestion = 0;
@@ -103,6 +109,7 @@
       resetQuiz(); // Reset quiz after completion
     }
   }
+  onMount(playSound);
 </script>
 
 <h1>Who's That Pokemon</h1>
@@ -131,9 +138,9 @@
 
 <style>
   h1 {
-     text-align: center; /* Center align the text */
-     color: #333; /* Set text color */
-     font-size: 2rem; /* Adjust font size */
+     text-align: center; 
+     color: #333; 
+     font-size: 2rem; 
      margin-bottom: 20px; /* Add margin below the heading */
      letter-spacing: 2px; /* Adjust letter spacing */
    }
@@ -170,7 +177,7 @@
      width: 1em;
      height: 1em;
      border-radius: 50%; /* Create a circular radio button */
-     border: 2px solid #333; /* Add border for visual clarity */
+     border: 2px solid #333; 
      margin-right: 0.5em; /* Space between radio button and label */
    }
  

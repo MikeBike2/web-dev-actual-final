@@ -1,7 +1,9 @@
 <script>
   //will code random quiz data if i get time using api call. so its not the same quiz each time
+  import { onMount } from 'svelte';
   import Button from "../../components/Button.svelte";
   import Images from "../../components/Images/whosthatpokemon.png";
+  import Sounds from "../../components/Sounds/who's-that-pokemon-made-with-Voicemod.mp3"
   let currentQuestion = 0;
   let score = 0;
   let brightness = 0; // Initial brightness
@@ -78,7 +80,10 @@
       selectedAnswer: null,
     },
   ];
-
+  function playSound() {
+    const audio = new Audio(`${Sounds}`);
+    audio.play();
+  }
   function resetQuiz() {
     currentQuestion = 0;
     score = 0;
@@ -107,6 +112,7 @@
       }
     }, 2000); // Delay in milliseconds
   }
+  onMount(playSound);
 </script>
 
 <h1>Who's That Pokemon</h1>
@@ -136,11 +142,11 @@
 
 <style>
   h1 {
-    text-align: center; /* Center align the text */
-    color: #333; /* Set text color */
-    font-size: 2rem; /* Adjust font size */
-    margin-bottom: 20px; /* Add margin below the heading */
-    letter-spacing: 2px; /* Adjust letter spacing */
+    text-align: center; 
+    color: #333; 
+    font-size: 2rem; 
+    margin-bottom: 20px;
+    letter-spacing: 2px; 
   }
 
   .quiz-container {
@@ -155,14 +161,14 @@
     box-sizing: border-box;
     position: relative;
     background-image: url("../../components/Images/whosthatpokemon.png");
-    background-size: cover; /* Cover the entire container with the background image */
+    background-size: cover; 
     background-position: right;
   }
 
   .quiz-image {
     max-width: 100%;
     height: auto;
-    transition: filter 0.3s ease; /* Smooth transition for filter effects */
+    transition: filter 0.3s ease; 
   }
 
   .option {
@@ -170,19 +176,18 @@
   }
 
   input[type="radio"] {
-    appearance: none; /* Remove default radio button appearance */
+    appearance: none; 
     width: 1em;
     height: 1em;
-    border-radius: 50%; /* Create a circular radio button */
-    border: 2px solid #333; /* Add border for visual clarity */
-    margin-right: 0.5em; /* Space between radio button and label */
+    border-radius: 50%; 
+    border: 2px solid #333;
+    margin-right: 0.5em; 
   }
 
   input[type="radio"]:checked {
-    background-color: #333; /* Change background color when checked */
+    background-color: #333; 
   }
 
-  /* Media query for responsive adjustments */
   @media screen and (max-width: 768px) {
     .quiz-container {
       flex-direction: column;
@@ -190,13 +195,13 @@
       background-position: left;
     }
     .quiz-image {
-      max-width: 60%; /* Adjusted width for smaller screens */
+      max-width: 60%; 
     }
   }
 
   @media screen and (max-width: 480px) {
     .quiz-image {
-      max-width: 40%; /* Further reduced width for smaller screens */
+      max-width: 40%; 
       background-position: left;
     }
   }

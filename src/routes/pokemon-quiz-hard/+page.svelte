@@ -1,6 +1,6 @@
 <script>
   import Button from "../../components/Button.svelte";
-
+  import img from "/static/whosthatpokemon.png"
   let currentQuestion = 0;
   let score = 0;
   let brightness = 0; // Initial brightness
@@ -155,7 +155,6 @@
     background-size: cover; /* Cover the entire container with the background image */
     background-position: center; /* Center the background image */
   }
-
   .quiz-image {
     max-width: 100%;
     height: auto;
@@ -184,24 +183,13 @@
     .quiz-container {
       flex-direction: column;
       height: auto;
-    background-image: url('whosthatpokemon.png'); /* Set the background image */
-    background-size: cover; /* Cover the entire container with the background image */
-    background-position: center; /* Center the background image */
     }
     .quiz-image {
       max-width: 60%; /* Adjusted width for smaller screens */
-      
     }
   }
 
   @media screen and (max-width: 480px) {
-    .quiz-container {
-    flex-direction: column;
-    height: auto;
-    background-image: url('whosthatpokemon.png'); /* Set the background image */
-    background-size: cover; /* Cover the entire container with the background image */
-    background-position: center; /* Center the background image */
-    }
     .quiz-image {
       max-width: 40%; /* Further reduced width for smaller screens */
     }

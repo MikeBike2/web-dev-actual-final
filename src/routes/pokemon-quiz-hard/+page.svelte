@@ -143,7 +143,7 @@
   .quiz-container {
     border: solid black 1px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     height: 80vh;
     max-width: 80%;

@@ -50,7 +50,7 @@
     },
     {
       imageUrl:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/134.png",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/135.png",
       options: ["Vaporeon", "Jolteon", "Flareon", "Eevee"],
       answer: "Jolteon",
       selectedAnswer: null,
@@ -64,7 +64,7 @@
     },
     {
       imageUrl:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/167.png",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/171.png",
       options: ["Chinchou", "Lanturn", "Qwilfish", "Remoraid"],
       answer: "Lanturn",
       selectedAnswer: null,
@@ -136,8 +136,12 @@
 </div>
 
 <style>
-  h1 {
-    text-align: center;
+ h1 {
+    text-align: center; /* Center align the text */
+    color: #333; /* Set text color */
+    font-size: 2rem; /* Adjust font size */
+    margin-bottom: 20px; /* Add margin below the heading */
+    letter-spacing: 2px; /* Adjust letter spacing */
   }
 
   .quiz-container {

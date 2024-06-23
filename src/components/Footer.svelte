@@ -1,5 +1,5 @@
 <script>
-  import Images from "../components/Images/pokedex-logo.png"
+  import Images from "../components/Images/pokedex_image.png"
   let currentYear = new Date().getFullYear();
 
   export let footerItems;

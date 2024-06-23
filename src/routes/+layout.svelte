@@ -8,6 +8,7 @@
     { text: "Home", href: "/" },
     { text: "About", href: "../about" },
     { text: "Pokemon Quiz", href: "../pokemon-quiz" },
+    {text: "Pokemon Quiz(hard)", href: "../pokemon-quiz-hard"},
   ];
 
   let footerItems = [

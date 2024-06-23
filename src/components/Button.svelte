@@ -1,6 +1,4 @@
-
 <script>
- 
   export let text = '';
   export let onClick = () => {};
 </script>
@@ -18,6 +16,21 @@
       0 1px 3px 1px rgba(0, 0, 0, 0.05);
     border-radius: 0.375rem;
     cursor: pointer;
+    font-size: 1rem; /* Base font size */
   }
-</style>
 
+  /* Media queries for responsiveness */
+  @media screen and (max-width: 768px) {
+    button {
+      padding: 0.5rem;
+      font-size: 0.9rem; 
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    button {
+      padding: 0.4rem;
+      font-size: 0.8rem; 
+  }
+}
+</style>

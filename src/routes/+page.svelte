@@ -3,14 +3,9 @@
   export let data;
 </script>
 
-<header></header>
-
 <main>
   <div>
     <Card {data} />
-    
-
-    
   </div>
 </main>
 

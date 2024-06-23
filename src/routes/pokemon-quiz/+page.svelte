@@ -1,0 +1,123 @@
+<script>
+  import Button from "../../components/Button.svelte";
+
+  let currentQuestion = 0;
+  let score = 0;
+
+  const questions = [
+    {
+      imageUrl:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+      options: ["Pikachu", "Bulbasaur", "Charmander", "Squirtle"],
+      answer: "Bulbasaur",
+      selectedAnswer: null, // Initially no answer selected
+    },
+    {
+      imageUrl:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+      options: ["Charizard", "Blastoise", "Caterpie", "Charmander"],
+      answer: "Charmander",
+      selectedAnswer: null,
+    },
+    {
+      imageUrl:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+      options: ["Squirtle", "Venusaur", "Pikachu", "Charizard"],
+      answer: "Squirtle",
+      selectedAnswer: null,
+    },
+  ];
+
+  function resetQuiz() {
+    currentQuestion = 0;
+    score = 0;
+    questions.forEach((question) => {
+      question.selectedAnswer = null;
+    });
+  }
+
+  function selectAnswer() {
+    const correctAnswer = questions[currentQuestion].answer;
+    const selectedAnswer = questions[currentQuestion].selectedAnswer;
+
+    if (selectedAnswer === correctAnswer) {
+      score++; // Increment score if selected answer is correct
+    }
+
+    currentQuestion++; // Move to the next question
+
+    if (currentQuestion >= questions.length) {
+      alert(`Quiz completed! Your score is ${score}/${questions.length}`);
+      resetQuiz(); // Reset quiz after completion
+    }
+  }
+</script>
+
+<h1>Who's That Pokemon</h1>
+
+<div class="quiz-container">
+  <img
+    src={questions[currentQuestion].imageUrl}
+    alt={questions[currentQuestion].answer}
+    class="quiz-image"
+  />
+
+  {#each questions[currentQuestion].options as option}
+    <div class="option">
+      <input
+        type="radio"
+        id={option}
+        name="answer"
+        bind:group={questions[currentQuestion].selectedAnswer}
+        value={option}
+      />
+      <label for={option}>{option}</label>
+    </div>
+  {/each}
+  <Button text="Select Answer" onClick={selectAnswer} />
+</div>
+
+<style>
+  h1 {
+    text-align: center;
+  }
+
+  .quiz-container {
+    border: solid black 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    max-width: 80%;
+    margin: 0 auto; /* Center align horizontally */
+    padding: 20px; /* Add padding for spacing */
+    box-sizing: border-box; /* Ensure padding doesn't affect max-width */
+  }
+
+  .quiz-image {
+    max-width: 100%; /* Ensure image doesn't overflow container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .option {
+    margin: 10px 0;
+  }
+
+  /* Media query for responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .quiz-container {
+      flex-direction: column; /* Stack elements vertically on smaller screens */
+      height: auto; /* Allow content to determine height */
+    }
+
+    .quiz-image {
+      max-width: 60%; /* Adjusted width for smaller screens */
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .quiz-image {
+      max-width: 40%; /* Further reduced width for smaller screens */
+    }
+  }
+</style>

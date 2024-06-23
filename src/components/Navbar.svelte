@@ -1,6 +1,6 @@
 
 <script>
-
+//ended up using the header for nav for now.
   import Button from "./Button.svelte";
 
 </script>

@@ -9,9 +9,15 @@
 
   let navItems = [
     { text: "Home", href: "/" },
-    { text: "About", href: "../GetPokeAbilites" },
-    { text: "Random pokemon", href: "/" },
+    { text: "About", href: "../about" },
+    { text: "Pokemon Quiz", href: "../pokemon-quiz" },
   ];
+
+  let footerItems = [
+    { text: "Top of Page", href: "/" },
+    { text: "About", href: "../about" },
+    
+  ]
 </script>
 
 
@@ -22,7 +28,7 @@
 
 <slot />
 <footer>
-  <Footer />
+  <Footer {footerItems} />
 </footer>
 
 

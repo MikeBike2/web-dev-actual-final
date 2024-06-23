@@ -1,36 +1,33 @@
 <script>
   let currentYear = new Date().getFullYear();
-  //test
+  export let footerItems;
 </script>
 
 <footer>
   <div class="image-container">
     <img
       src="src/components/Images/pokedex_image.png"
-      width="200"
-      height="100"
       alt="team-logo"
-      class="hover-image"
+      class="logo-image"
     />
   </div>
 
   <nav>
     <ul>
-      <li>
-        <a href="/" class="RepoLink">Link to Git Repository</a>
-      </li>
-      <li><a href="/">About</a></li>
-      <li><a href="/">Top of page</a></li>
+      {#each footerItems as item}
+        <li><a href={item.href}>{item.text}</a></li>
+      {/each}
     </ul>
   </nav>
+
   <div id="footer-year">{currentYear}</div>
 </footer>
 
 <style>
   footer {
-    position: fixed; 
-    bottom: 0; 
-    width: 100%; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,20 +37,24 @@
     border-top: 1px solid #474350;
   }
 
+  .logo-image {
+    width: 200px; 
+    height: 100px; 
+  }
+
   footer .image-container {
-    opacity: 0; /* Initially hide the image */
-    transition: opacity 0.3s ease; /* transition for opacity change*/
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
 
   footer:hover .image-container {
-    opacity: 1; /* Show the image on footer hover */
+    opacity: 1;
   }
 
   footer nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-
     list-style: none;
     padding: 0;
   }
@@ -70,5 +71,20 @@
 
   footer a:hover {
     text-decoration: underline;
+  }
+
+  /* Media queries for responsiveness */
+  @media screen and (max-width: 768px) {
+    .logo-image {
+      width: 150px; /* Adjusted width for smaller screens */
+      height: auto; /* Maintain aspect ratio */
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .logo-image {
+      display: none; /* Hide the logo image on smaller screens */
+    }
   }
 </style>
